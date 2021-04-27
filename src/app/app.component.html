@@ -1,0 +1,26 @@
+<button (click)="getStudents()">Get Data</button>
+<button (click)="getApi()">Get data from Api</button>
+<div>
+  <table>
+    <tr>
+      Id
+    </tr>
+    <tr>
+      Name
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.studentId }}</td>
+      <td>{{ student.name }}</td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div>
+  <li *ngFor="let data of dataset">
+    <ul>
+  <li *ngFor="let data1 of data | keyvalue">
+    {{ data1.key }}:{{ data1.value }}</ul>
+  </li>
+</div>
